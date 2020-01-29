@@ -1,0 +1,28 @@
+<% if @other_users.present? %>
+  <h2>Users List To Follow</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Action</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @other_users.each do |user| %>
+        <tr>
+          <td><%= user.email %></td>
+          <td>
+            <% if current_user.following?(user) %>
+              <%= link_to 'Unfollow', unfollow_user_path(user.id) %>
+            <% else %>
+              <%= link_to 'Follow', follow_user_path(user.id) %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

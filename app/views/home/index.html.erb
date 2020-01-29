@@ -1,0 +1,13 @@
+<h2>Tweet Board</h2>
+
+<div class="tweetList">
+  <% @following_tweets.each do |tweet| %>
+    <div class="tweet-row">
+      <div class="row-header">
+        <div class="align-left"><b><%= tweet.user.email %></b></div>
+        <div class="align-right"><%= time_ago_in_words(tweet.updated_at) %></div>
+      </div>
+      <div class="row-content"><%= tweet.content %></div>
+    </div>
+  <% end %>
+</div>

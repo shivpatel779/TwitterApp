@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.tweetList{
+  .tweet-row{
+    padding: 10px;
+    margin: 10px;
+    background-color: #80808066;
+    width: 50%;
+
+    .row-header {
+      width: 100%;
+
+      .align-left {
+        float: left;
+        width: 50%;
+      }
+
+      .align-right{
+        float: right;
+        text-align: right;
+        width: 50%;
+      }
+    }
+    .row-content {
+      margin-top: 25px;
+      padding: 10px;
+      background-color: #fff;
+    }
+  }
+}
